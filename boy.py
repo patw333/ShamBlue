@@ -33,6 +33,9 @@ class TwitterAPI:
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
+        for follower in tweepy.Cursor(self.api.followers).items():
+            follower.follow()
+
     def tweet(self, message):
         self.api.update_status(status=message)
 
@@ -57,5 +60,5 @@ if __name__ == "__main__":
     url='https://pbs.twimg.com/media/B5DQsLyCYAEgRRT.jpg'
     #twitter.tweet()
     gen=imageGen()
-    message = u"参加者募集！参戦ID:"+raidCode()+gen[0]
+    message = u"参加者募集！参戦ID："+raidCode()+gen[0]
     twitter.tweet_image(gen[1],message)

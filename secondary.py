@@ -39,8 +39,22 @@ class TwitterAPI:
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
-        for follower in tweepy.Cursor(self.api.followers).items():
-            follower.follow()
+
+        users=self.api.followers_ids(self.api)
+        print(users)
+        friends=self.api.friends_ids(self.api)
+        print(friends)
+
+        for follower in users:
+            if follower not in friends:
+                try:
+                    self.api.create_friendship(follower)
+                except:
+                    print()
+
+#        for follower in tweepy.Cursor(self.api.followers).items():
+#            if tweepy.API.exists_friendship(self.api,follow)==false:
+#               follower.follow()
 
     def tweet(self, message):
         self.api.update_status(status=message)

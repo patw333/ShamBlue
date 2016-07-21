@@ -33,8 +33,6 @@ class TwitterAPI:
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
-        for follower in tweepy.Cursor(self.api.followers).items():
-            follower.follow()
 
     def tweet(self, message):
         self.api.update_status(status=message)

@@ -41,9 +41,7 @@ class TwitterAPI:
 
 
         users=self.api.followers_ids(self.api)
-        print(users)
         friends=self.api.friends_ids(self.api)
-        print(friends)
 
         for follower in users:
             if follower not in friends:

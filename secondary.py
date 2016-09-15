@@ -4,6 +4,25 @@ import requests
 import os
 import random
 
+def raidCode():
+	res=''.join([random.choice('0123456789ABCDEF') for x in range(8)])
+	return res+"\n"
+
+#Add HL raids+ Ghost Light
+def imageGen():
+	num=random.randint(0,8)
+	array=["https://raw.githubusercontent.com/patw333/ShamBlue/master/celeste.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/coloss.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/levia.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/tiamat.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/proto.jpg"]
+	text=[u"Lv75 セレスト・マグナ",u"Lv70 コロッサス・マグナ",u"Lv60 リヴァイアサン・マグナ",u"Lv50 ティアマト・マグナ",u"Lv100 プロトバハムート"]
+	res=[]
+	if num>=4:
+		res.append(text[4])
+		res.append(array[4])
+	else:
+		res.append(text[num])
+		res.append(array[num])
+	return res
+
+
 def randTweet():
     lines = open('roytxt.txt').read().splitlines()
     myline =random.choice(lines)

@@ -8,7 +8,7 @@ def raidCode():
 	res=''.join([random.choice('0123456789ABCDEF') for x in range(8)])
 	return res+"\n"
 
-
+#Add HL raids+ Ghost Light
 def imageGen():
 	num=random.randint(0,8)
 	array=["https://raw.githubusercontent.com/patw333/ShamBlue/master/celeste.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/coloss.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/levia.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/tiamat.jpg","https://raw.githubusercontent.com/patw333/ShamBlue/master/proto.jpg"]

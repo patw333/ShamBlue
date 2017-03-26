@@ -13,6 +13,7 @@ ShamBlue is a Twitter bot that tweets out fake raid posts, but because we can't 
 [BallsDiep]: https://twitter.com/BallsDiep
 
 # Note
+This bot is currently run on Heroku, and many of the files, namely `requirements.txt` and `procfile.txt` are both used for that. `boy.py` and `secondary.py` are also different because of Heroku, feel free to change them as you need.
 
 Please do not put attempt to put rare raids such as Grand Order because that is actually what we in the GranBlue community call a `Dick Move` and would get your bot blocked more than I think I already am.
 

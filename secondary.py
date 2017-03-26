@@ -32,11 +32,11 @@ def randTweet():
 
 class TwitterAPI:
     def __init__(self):
-        consumer_key = "xtQ6aVIjChUh8KZ5n6p9wsREg"
-        consumer_secret = "FOTe8iDyGVGMLQklRqTklTAINP5gd5i8Gi5VTqnGtOZa1LelkB"
+        consumer_key = "Find it out yourself!"
+        consumer_secret = "Find it out yourself!"
         auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-        access_token = "3262061310-4AQphNwkUKz9SCYPb5RxIDz4lqarMN24QL6PKos"
-        access_token_secret = "SU28iUiNddl8qV3YdG63Nv3GRqcMgsaU8sdGSIpsV38w4"
+        access_token = "Find it out yourself!"
+	access_token_secret = "Find it out yourself!"
         auth.set_access_token(access_token, access_token_secret)
         self.api = tweepy.API(auth)
 
